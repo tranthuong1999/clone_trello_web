@@ -1,3 +1,5 @@
+@import './_setting.scss';
+
 $board-bg-color: #0079bf;
 $gap: 10px;
 $column-header-height: 46px;
@@ -31,7 +33,7 @@ body {
     }
   }
 
-  .board-colums {
+  .board-content {
     display: flex;
     overflow-x: auto;
 
@@ -39,6 +41,7 @@ body {
       width: 300px;
       flex: 0 0 auto;
       height: calc(100% - #{$gap});
+
       &:not(:first-child) {
         margin-left: $gap;
       }
@@ -67,7 +70,7 @@ body {
         // border-top-right-radius: 46px;
       }
 
-      ul {
+      ul.task-list {
         list-style-type: none;
         overflow-y: auto;
         margin: 0;
@@ -85,7 +88,7 @@ body {
           background-color: black;
         }
 
-        li {
+        li.task-item {
           background-color: white;
           padding: $gap;
           background-color: #80808052;
